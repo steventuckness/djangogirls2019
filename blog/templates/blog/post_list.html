@@ -6,37 +6,13 @@
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>
-                Maroon fire ship mizzen lanyard skysail hardtack run a shot across the bow to go on account jack hail-shot. Transom Privateer bounty execution dock gangway Corsair lateen sail run a shot across the bow lookout Sea Legs. Gunwalls square-rigged Shiver me timbers lookout chase salmagundi interloper spirits coffer black spot.
-
-                Gold Road barkadeer keelhaul gun Letter of Marque plunder six pounders wench spanker hempen halter. Red ensign squiffy carouser mizzen ye careen barkadeer nipperkin brigantine crimp. Plate Fleet rum clipper hempen halter pillage parrel piracy hail-shot schooner walk the plank.
-                
-                Parley chase hornswaggle black jack reef gabion crimp knave draught landlubber or just lubber. Run a shot across the bow swing the lead cutlass square-rigged Corsair lad coffer handsomely bounty gabion. Cat o'nine tails gibbet scourge of the seven seas crimp warp American Main long boat black spot to go on account hempen halter.
-            </p>
+      
+    {% for post in posts %}
+         <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>
-                House hen chinchillas in barn livestock cat hogs chicks trucks. Mooo cat daisys, grunt in turkey coo, windmill at bull. Lettus gobblers pens, radish on kidney beans, llamas pick up truck. Killer scourge scared, drowning helpless sheep at, farmers market and cultivator ostrich. Cauliflower a seeds quail. Oranges cucumbers rhubarb gourds watermelon. Lettus gobblers pens, radish on kidney beans, llamas pick up truck. Turkey daisys eggs squeal, horses moonshine apple.
-
-                Raising Mooo tractor plow. Goat goose hen horse. Shovels at rakes plows. Cauliflower a seeds quail. Bulls at rose garden cucumbers mice sunflower wheat in pig. Goose hammers cattle rats in crows. Mouse soybeans sweet corn hogs llamas or oink oink wind. Mooo cat daisys, grunt in turkey coo, windmill at bull. Sage mower goat, raccoons rhubarb outhouse a, apples berries corn. Veterinaria.
-                
-                At Seeder eggs with watermelon ostriches. Combine Harvester swather, baler as haybine parsley, melon in hay rake. Garden windmill chicks, hen at corn in, lettus a peppers. Mooo cat daisys, grunt in turkey coo, windmill at bull. Lamb i.
-                
-                Eggplant baler rain barrels manure hay rake. . Outhouse at nails mower. Goat goose hen horse. Oranges cucumbers rhubarb gourds watermelon. House hen chinchillas in barn livestock cat hogs chicks trucks. Onion organic oranges and purr ducks canning owls at a squeal. Utters are weathervane foal est. Mooo cat daisys, grunt in turkey coo, windmill at bull. Cauliflower a seeds quail. In the straw rain barrels. Killer scourge scared, drowning helpless sheep at, farmers market and cultivato.
-                
-                Ostrich. Bulls at rose garden cucumbers mice sunflower wheat in pig. In quilt yearlings, gobblers pumpkin are porky pig beef, sheep rose garden sage, in pitch fork sunflower cowpies mice. Baa potato donkey mouse, at gate grain bins woof. In the straw rain barrels. Veterinarian at Seeder eggs with watermelon ostriches. Feed in a woof, a farmers market. In the straw rain barrels. Ewes fox, hay hook hay manure, John Deere radish barn, .
-                
-                Hay loft house at pony. Outhouse at nails mower. Combine Harvester swather, baler as haybine parsley, melon in hay rake. Coo with rabbits ect. Augers oats hen cowpies. Outhouse at nails mower. Prairie dogs raccoons robins rats. Killer scourge scared, drowning helpless sheep at, farmers market and cultivator ostrich. Killer scourge scared, drowning helpless sheep at, farmers market and cultivator ostrich. Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. Gate wind.
-                
-                Moonshine horses meow irrigation , with feed troughs cheep, or cabbage with pumpkin trees chicken. Garden windmill chicks, hen at corn in, lettus a peppers. Onion organic oranges and purr ducks cannin.</p>
-            </p>
-        </div>
+    {% endfor %}
     </body>
 </html>
